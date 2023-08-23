@@ -1,0 +1,237 @@
+body {
+
+    font-family: "Verdana,sans-serif";
+    display: block;
+    position: absolute;
+
+    left: 0px;
+    top: 0px;
+
+    background-color: white;
+
+    line-break: normal;
+
+}
+
+.markdown-body h1:first-of-type {
+  
+    display: none;
+    
+}
+
+body * {
+    height: auto;
+    line-height: 1.5em !important;;
+}
+
+p+blockquote{
+          
+    width: 75%;
+    margin: auto;
+
+}
+
+p+blockquote p {
+        
+    font-size: 1.025em;
+    letter-spacing: initial;
+    line-height: 1.625em;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-align: justify;
+    
+}
+
+h1+p img {
+
+    width: 100% !important;
+        
+}
+
+@media screen {
+
+
+    h1+ul {
+
+        list-style: none;
+
+        font-weight: 600;
+
+    }
+
+    h1,
+    h2 {
+
+        /* letter-spacing: 0.0825em; */
+        padding-bottom: 0.125em;
+        border-bottom: 1px solid black;
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    p,
+    li,
+    ul * {
+
+        letter-spacing: 0.075em;
+        font-size: 1.0375rem;
+
+    }
+
+    a>img {
+
+        width: 14em;
+
+    }
+
+    @media (orientation: portrait) {
+
+        body {
+
+            width: 80%;
+            padding-left: 10%;
+
+        }
+
+        h1+ul {
+            display: block;
+            margin-left: -1em;
+        }
+
+        ul {
+            margin-left: -2.5em;
+        }
+
+        li {
+
+            list-style: none;
+
+        }
+
+        img {
+
+            display: block;
+            width: 100%; /* Change back to 80% sometime? */
+            margin: auto;
+
+        }
+
+        p:has(img)+p {
+
+            width: calc(100% - 25px);
+            padding-left: 10px;
+            border-left: 1px solid black;
+
+        }
+
+    }
+
+    @media (orientation: landscape) {
+
+        body {
+
+            width: 60%;
+            padding-left: 20%;
+
+        }
+
+        h1+ul {
+            display: flex;
+            min-width: 450px;
+            max-width: 550px;
+            padding-left: 2em;
+        }
+
+        /* p {
+
+            padding-left: 1em;
+            padding-right: 1em;
+
+        } */
+
+        ol {
+            padding-right: 3em;
+            padding-left: -1em;
+        }
+
+        img {
+
+            display: block;
+            margin: auto;
+            width: 100%; /* Consider changing back to 80% at later date? */
+
+        }
+
+        p:has(img)+p {
+
+            width: calc(165px + 20%);
+            margin-left: 15px;
+            border-left: 1px solid black;
+
+        }
+
+        li:first-child:nth-last-child(1) {
+
+
+            padding-left: 1em;
+
+
+        }
+
+    }
+
+}
+
+
+@media print {
+
+    body {
+
+        width: 90%;
+        padding-left: 5%;
+
+    }
+
+    h1+ul {
+        display: none;
+    }
+
+    h1 {
+        font-size: 30pt;
+    }
+
+    h2,
+    h3,
+    h4 {
+
+        font-size: 28pt;
+
+    }
+
+    p+blockquote p {
+        
+        font-size: 20pt;
+
+    }
+
+    p {
+        font-size: 24pt;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    li {
+        font-size: 24pt;
+    }
+
+}
